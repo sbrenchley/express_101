@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('shared/head') -%>
+
+  <body>
+
+    <div class="wrapper">
+      <div class="main main-raised">
+			  <div class="container">
+
+          <div class="section landing-section">
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2">
+                <h2 class="text-center title">Postal Rate Calculator</h2>
+
+                <% if (!error) { %>
+
+                  <h4 class="text-center description">
+                    Weight: <%= weight %>, Letter Type: <%= letterType %>
+                  </h4>
+                  <h4 class="text-center description">
+                    Here is your total price!
+                  </h4>
+                  <h2 class="text-center title"><%= price %></h2>
+
+                <% } else { %>
+                  <div class="alert alert-danger">
+                    <p><%= error %></p>
+                  </div>
+                <% } %>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <footer class="footer">
+	      <div class="container">
+          <div class="copyright pull-right">
+            &copy; 2017 made by Suzanne Brenchley 💁
+          </div>
+	      </div>
+	    </footer>
+    </div>
+
+  </body>
+</html>
